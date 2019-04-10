@@ -13,9 +13,9 @@
 
 #define Flag_Reg_Size 5
 
-#define BIT_CLEAR(A,B) (A = ((A) & ~(1 << (B)))) // очитка в ноль все биты
-#define BIT_SET(A,B) (A = ((A) | (1 << (B)))) //	установка бита 
-#define BIT_CHECK(A,B) (((A) >> B) & 0x1)   //	возвращае 0 или 1(логическая операция)
+#define BIT_CLEAR(A,B) (A = ((A) & ~(1 << (B)))) // Г®Г·ГЁГІГЄГ  Гў Г­Г®Г«Гј ГўГ±ГҐ ГЎГЁГІГ»
+#define BIT_SET(A,B) (A = ((A) | (1 << (B)))) //	ГіГ±ГІГ Г­Г®ГўГЄГ  ГЎГЁГІГ  
+#define BIT_CHECK(A,B) (((A) >> B) & 0x1)   //	ГўГ®Г§ГўГ°Г Г№Г ГҐ 0 ГЁГ«ГЁ 1(Г«Г®ГЈГЁГ·ГҐГ±ГЄГ Гї Г®ГЇГҐГ°Г Г¶ГЁГї)
 #define COMMAND_LENGTH 15
 
 int sc_memoryInit();
