@@ -62,7 +62,7 @@ int sc_memoryLoad(char){
 	}
 	n = fread(Mem_Mas,sizeof(int),1,f);
 	for(int i = 0; i < N; i++){
-		Mem_Mas[i] &= 0x7FFF; // по разрядное И
+		Mem_Mas[i] &= 0x7FFF; // ГЇГ® Г°Г Г§Г°ГїГ¤Г­Г®ГҐ Г€
 		cout<<"Mem_Mas["<<i<<"] = "<<Mem_Mas[i]<<" "; 
 	}
 	fclose(f);
@@ -72,7 +72,7 @@ int sc_memoryLoad(char){
 		return 0;
 }
 
-int sc_regInit(){	//инициализирует регистр флагов нулевым значением
+int sc_regInit(){	//ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°ГіГҐГІ Г°ГҐГЈГЁГ±ГІГ° ГґГ«Г ГЈГ®Гў Г­ГіГ«ГҐГўГ»Г¬ Г§Г­Г Г·ГҐГ­ГЁГҐГ¬
 	Mem_Flag = 0;
 	return 1;
 }
@@ -89,7 +89,7 @@ int sc_regSet(int reg, int value){
 	return 1;		
 }
 
-int sc_commandEncode(int command, int operand, int *value)//кодировка команды
+int sc_commandEncode(int command, int operand, int *value)//ГЄГ®Г¤ГЁГ°Г®ГўГЄГ  ГЄГ®Г¬Г Г­Г¤Г»
 {
 	if(operand > 127 || command > 127)
 	return 0;
@@ -101,7 +101,7 @@ int sc_commandEncode(int command, int operand, int *value)//кодировка команды
 	*value = *value  | temp;
 	return 1;
 }
-int sc_commandDecode(int value, int *command, int *operand){	//Декодирование команды
+int sc_commandDecode(int value, int *command, int *operand){	//Г„ГҐГЄГ®Г¤ГЁГ°Г®ГўГ Г­ГЁГҐ ГЄГ®Г¬Г Г­Г¤Г»
 	if(BIT_CHECK(value,COMMAND_LENGTH - 1))
 	return 0;
 	int temp;
